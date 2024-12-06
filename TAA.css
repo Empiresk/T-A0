@@ -1,0 +1,55 @@
+/* Mise en page globale */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('IMG-20241206-WA0004.jpg') no-repeat center center/cover; /* Image d'arrière-plan */
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Conteneur principal */
+.container {
+    text-align: center;
+}
+
+/* Logo */
+.logo img {
+    width: 300px; /* Taille plus grande du logo */
+    opacity: 0; /* Caché par défaut */
+    transform: scale(0.5); /* Réduit initialement */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation fluide */
+}
+
+.logo.show img {
+    opacity: 1; /* Visible */
+    transform: scale(1); /* Zoom vers sa taille normale */
+}
+
+/* Bouton "Suivant" */
+.bouton-suivant {
+    position: fixed; /* Toujours en bas à droite */
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.bouton-suivant.hidden {
+    display: none; /* Caché par défaut */
+}
+
+.bouton-suivant.show {
+    display: inline-block;
+    opacity: 1; /* Apparition */
+}
